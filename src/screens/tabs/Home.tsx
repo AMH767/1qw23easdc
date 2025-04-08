@@ -118,7 +118,7 @@ export const Home: React.FC = () => {
                 marginBottom: 4,
               }}
             />
-            <text.H2 numberOfLines={1}>Hello, Kristin</text.H2>
+            <text.H2 numberOfLines={1}>Hello, Swimmer</text.H2>
           </div>
           <text.T14
             style={{color: theme.colors.bodyTextColor, marginBottom: 12}}
