@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --white-color: #fff;
+  --header-height: 42px;
+  --bottom-bar-height: 64px;
+  --main-color: #192639;
+}
+
+html {
+  body {
+    -ms-overflow-style: none;
+
+    font-family: 'Lato-Regular';
+
+    margin: 0;
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative;
+
+    header {
+      left: 0;
+      right: 0;
+      top: 0;
+      max-width: 650px;
+      margin: 0 auto;
+      position: fixed;
+      width: 100%;
+      height: var(--header-height);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--white-color);
+      z-index: 1;
+      transition: background-color 0.3s;
+    }
+
+    footer {
+      left: 0;
+      right: 0;
+      max-width: 650px;
+      margin: 0 auto;
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+      bottom: 0;
+      height: var(--bottom-bar-height);
+      background-color: var(--white-color);
+      border-top: 1px solid #eeeeee;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+
+        li {
+          cursor: pointer;
+        }
+      }
+    }
+
+    main {
+      padding-top: var(--header-height);
+      padding-bottom: var(--bottom-bar-height);
+      overflow-y: scroll;
+      width: 100%;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #acb4ba;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    button {
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      font: inherit;
+      color: inherit;
+      text-align: inherit;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    // Custom Styles
+
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .header-line::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background-color: #eaedf4;
+    }
+
+    .custom-block {
+      border-radius: 10px;
+      border: 1px solid white !important;
+      background: rgba(255, 255, 255, 0.5) !important;
+      box-shadow: 0px 4px 10px rgba(37, 73, 150, 0.1);
+    }
+
+    // Embla Carousel
+
+    .embla {
+      overflow: hidden;
+    }
+
+    .embla__container {
+      display: flex;
+    }
+
+    .embla__slide {
+      flex: 0 0 100%;
+      min-width: 0;
+    }
+
+    .swiper {
+      padding: 0 20px !important;
+    }
+
+    .top-placeholder::placeholder {
+      color: #333333;
+    }
+  }
+}
