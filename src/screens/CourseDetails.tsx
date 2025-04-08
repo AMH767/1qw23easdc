@@ -338,6 +338,13 @@ export const CourseDetails: React.FC = () => {
     );
   };
 
+
+
+
+
+
+
+
   const renderAboutCourse = (): JSX.Element | null => {
     if (selectedTab.id === 1) {
       return (
@@ -366,6 +373,40 @@ export const CourseDetails: React.FC = () => {
             Welcome to Udemy's first, No Coding Required, VR development course,
             using VRTK 4. Build once and deploy to both Oculus.
           </text.T16>
+          
+          {/* Добавленный план тренировки */}
+          <div style={{marginBottom: 25, padding: 15, background: '#f5f5f5', borderRadius: 8}}>
+            <text.H5 style={{marginBottom: 10}}>🏊‍♂️ План тренировки: 2300 метров</text.H5>
+            
+            <text.T16 style={{fontWeight: 'bold', marginBottom: 5}}>🔥 Разминка (600 метров)</text.T16>
+            <text.T16 style={{marginBottom: 5}}>300 метров произвольно</text.T16>
+            <text.T16 style={{fontStyle: 'italic', marginBottom: 10}}>🏝️ "Разогреваемся и настраиваемся!"</text.T16>
+            
+            <text.T16 style={{marginBottom: 5}}>200 метров ноги с доской</text.T16>
+            <text.T16 style={{fontStyle: 'italic', marginBottom: 10}}>🦵 "Работаем над мощным ударом!"</text.T16>
+            
+            <text.T16 style={{marginBottom: 5}}>100 метров вольный стиль с изменением дыхания</text.T16>
+            <text.T16 style={{fontStyle: 'italic', marginBottom: 10}}>🌬️ "Контроль дыхания = больше выносливости!"</text.T16>
+            
+            <text.T16 style={{marginBottom: 15}}>🔁 Повторите дважды.</text.T16>
+            
+            <text.T16 style={{fontWeight: 'bold', marginBottom: 5}}>💪 Основная часть (1400 метров)</text.T16>
+            <text.T16 style={{marginBottom: 5}}>3 × 300 метров вольный стиль</text.T16>
+            <text.T16 style={{fontStyle: 'italic', marginBottom: 10}}>⏱️ "Держим темп, не сбавляем!"</text.T16>
+            
+            <text.T16 style={{marginBottom: 5}}>500 метров вольный стиль с акцентом на технику</text.T16>
+            <text.T16 style={{fontStyle: 'italic', marginBottom: 10}}>🧠 "Длинный гребок = меньше усталости!"</text.T16>
+            
+            <text.T16 style={{fontWeight: 'bold', marginBottom: 5}}>🧘 Заключение (300 метров)</text.T16>
+            <text.T16 style={{marginBottom: 5}}>200 метров мягко</text.T16>
+            <text.T16 style={{fontStyle: 'italic', marginBottom: 10}}>🌊 "Восстанавливаемся, но не останавливаемся!"</text.T16>
+            
+            <text.T16 style={{marginBottom: 5}}>100 метров упражнения на технику</text.T16>
+            <text.T16 style={{fontStyle: 'italic', marginBottom: 10}}>✨ "Последние метры – на идеальную технику!"</text.T16>
+            
+            <text.T16 style={{marginBottom: 5}}>🎯 Итог: 2300 метров – отлично! 💪🔥</text.T16>
+          </div>
+          
           <components.Button
             title='Buy course'
             onClick={() => {
@@ -375,9 +416,62 @@ export const CourseDetails: React.FC = () => {
         </div>
       );
     }
-
+  
     return null;
   };
+
+
+//блок оригинала
+  // const renderAboutCourse = (): JSX.Element | null => {
+  //   if (selectedTab.id === 1) {
+  //     return (
+  //       <div
+  //         className='container'
+  //         style={{marginBottom: 20}}
+  //       >
+  //         <text.H5 style={{marginBottom: 10}}>About Course</text.H5>
+  //         <span style={{...utils.rowCenter({gap: 10}), marginBottom: 6}}>
+  //           <svg.UserSvg />
+  //           <text.T16>{course.author}</text.T16>
+  //         </span>
+  //         <span style={{...utils.rowCenter({gap: 10}), marginBottom: 6}}>
+  //           <svg.VideoSvg />
+  //           <text.T16>14 hours on-demand video</text.T16>
+  //         </span>
+  //         <span style={{...utils.rowCenter({gap: 10}), marginBottom: 6}}>
+  //           <svg.DownloadSvg />
+  //           <text.T16>16 downloadable resources</text.T16>
+  //         </span>
+  //         <span style={{...utils.rowCenter({gap: 10}), marginBottom: 10}}>
+  //           <svg.CertificateSvg />
+  //           <text.T16>Certificate of completion</text.T16>
+  //         </span>
+  //         <text.T16 style={{marginBottom: 25}}>
+  //           Welcome to Udemy's first, No Coding Required, VR development course,
+  //           using VRTK 4. Build once and deploy to both Oculus.
+  //         </text.T16>
+  //         <components.Button
+  //           title='Buy course'
+  //           onClick={() => {
+  //             navigate('/checkout', {state: {course}});
+  //           }}
+  //         />
+  //       </div>
+  //     );
+  //   }
+
+  //   return null;
+  // };
+
+
+
+
+
+
+
+
+
+
 
   const renderLessons = (): JSX.Element | null => {
     if (selectedTab.id === 2) {

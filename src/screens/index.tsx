@@ -11,6 +11,8 @@ import {ProfileEdit} from './ProfileEdit';
 import {AddANewCard} from './AddANewCard';
 import {LeaveAReview} from './LeaveAReview';
 import {CategoryList} from './CategoryList';
+import {BaseintegoryList} from './BaseintegoryList';
+
 import {CategoryGrid} from './CategoryGrid';
 import {CourseDetails} from './CourseDetails';
 import {PaymentFailed} from './PaymentFailed';
@@ -51,6 +53,7 @@ export const screens = {
   CategoryGrid,
   LeaveAReview,
   CategoryList,
+  BaseintegoryList,
   CourseDetails,
   PaymentFailed,
   PrivacyPolicy,

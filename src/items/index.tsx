@@ -5,6 +5,8 @@ import {ReviewItem} from './ReviewItem';
 import {ProfileItem} from './ProfileItem';
 import {CarouselItem} from './CarouselItem';
 import {CategoryItem} from './CategoryItem';
+import {Baseinitem} from './Baseinitem';
+
 import {WishlistItem} from './WishlistItem';
 import {PromocodeItem} from './PromocodeItem';
 
@@ -15,6 +17,8 @@ export const items = {
   ReviewItem,
   ProfileItem,
   CategoryItem,
+  Baseinitem,
+
   WishlistItem,
   CarouselItem,
   PromocodeItem,

@@ -115,6 +115,13 @@ const stack = createBrowserRouter([
     path: '/category-list',
     element: <screens.CategoryList />,
   },
+
+
+  {
+    path: '/BaseintegoryList',
+    element: <screens.BaseintegoryList />,
+  },
+
   {
     path: '/payment-failed',
     element: <screens.PaymentFailed />,
