@@ -85,7 +85,7 @@ export const ProfileEdit: React.FC = () => {
         <div className='container'>
           <custom.InputField
             label='Name'
-            placeholder='Kristin Watson'
+            placeholder='Чемпион🏊'
             containerStyle={{marginBottom: 10}}
           />
           <custom.InputField

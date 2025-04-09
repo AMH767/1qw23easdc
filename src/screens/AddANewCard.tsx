@@ -50,7 +50,7 @@ export const AddANewCard: React.FC = () => {
         />
         <custom.InputField
           label='Name'
-          placeholder='Kristin Watson'
+          placeholder='Чемпион🏊'
           containerStyle={{marginBottom: 10}}
         />
         <custom.InputField

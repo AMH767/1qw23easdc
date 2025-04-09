@@ -118,7 +118,7 @@ export const Home: React.FC = () => {
                 marginBottom: 4,
               }}
             />
-            <text.H2 numberOfLines={1}>Hello, Swimmer</text.H2>
+            <text.H2 numberOfLines={1}>Hi, Swimmer</text.H2>
           </div>
           <text.T14
             style={{color: theme.colors.bodyTextColor, marginBottom: 12}}
@@ -214,7 +214,7 @@ export const Home: React.FC = () => {
                   src={item.banner}
                   style={{height: '100%', objectFit: 'cover', borderRadius: 10}}
                   onClick={() => {
-                    navigate('/course-details', {
+                    navigate('/PrivacyRaspis', {
                       state: {course: coursesData[0]},
                     });
                   }}

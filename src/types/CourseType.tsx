@@ -2,6 +2,7 @@ export type CourseType = {
   id: number;
   name: string;
   price: number;
+
   rating: number;
   image: string;
   images: string[];

@@ -27,6 +27,14 @@ const stack = createBrowserRouter([
     path: '/profile/privacy-policy',
     element: <screens.PrivacyPolicy />,
   },
+  
+  {
+    path: '/PrivacyRaspis',
+    element: <screens.PrivacyRaspis />,
+  },
+
+
+
   {
     path: '/profile/my-wishlist',
     element: <screens.MyWishlist />,
@@ -118,7 +126,7 @@ const stack = createBrowserRouter([
 
 
   {
-    path: '/BaseintegoryList',
+    path: '/baseintegoryList',
     element: <screens.BaseintegoryList />,
   },
 

@@ -17,6 +17,8 @@ import {CategoryGrid} from './CategoryGrid';
 import {CourseDetails} from './CourseDetails';
 import {PaymentFailed} from './PaymentFailed';
 import {PrivacyPolicy} from './PrivacyPolicy';
+import {PrivacyRaspis} from './PrivacyRaspis';
+
 import {PaymentSuccess} from './PaymentSuccess';
 import {ForgotPassword} from './ForgotPassword';
 import {HelpAndSupport} from './HelpAndSupport';
@@ -57,6 +59,8 @@ export const screens = {
   CourseDetails,
   PaymentFailed,
   PrivacyPolicy,
+  PrivacyRaspis,
+
   PaymentSuccess,
   ForgotPassword,
   HelpAndSupport,

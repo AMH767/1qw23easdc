@@ -71,16 +71,19 @@ export const Profile: React.FC = () => {
           numberOfLines={1}
           style={{textAlign: 'center'}}
         >
-          Kristin Watson
+          Чемпион🏊
         </text.H2>
         <text.T16
           numberOfLines={1}
           style={{textAlign: 'center', marginBottom: 20}}
         >
-          kristinwatson@mail.com
+         Мира
+         
+{/* почта пользователя */}
+
         </text.T16>
         <items.ProfileItem
-          title='Wishlist'
+          title='Лайки'
           icon={<svg.HeartSvg />}
           containerStyle={{marginBottom: 6}}
           onClick={() => {
@@ -88,7 +91,7 @@ export const Profile: React.FC = () => {
           }}
         />
         <items.ProfileItem
-          title='Coupons'
+          title='Купоны'
           icon={<svg.GiftSvg />}
           containerStyle={{marginBottom: 6}}
           onClick={() => {
@@ -96,7 +99,7 @@ export const Profile: React.FC = () => {
           }}
         />
         <items.ProfileItem
-          title='Wallet'
+          title='Кашелек'
           icon={<svg.WalletSvg />}
           containerStyle={{marginBottom: 6}}
           onClick={() => {
@@ -104,7 +107,7 @@ export const Profile: React.FC = () => {
           }}
         />
         <items.ProfileItem
-          title='Help & Support'
+          title='Техподдержка'
           icon={<svg.HelpCirceSvg />}
           containerStyle={{marginBottom: 6}}
           onClick={() => {

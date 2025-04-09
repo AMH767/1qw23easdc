@@ -1,6 +1,4 @@
-import React, {useState, useEffect} from 'react';
-import {useLocation} from 'react-router-dom';
-
+import React from 'react';
 import {text} from '../text';
 import {utils} from '../utils';
 import {theme} from '../constants';
@@ -12,6 +10,11 @@ type Props = {
 };
 
 export const CoursePrice: React.FC<Props> = ({containerStyle, course}) => {
+  // Полностью скрываем компонент, если цена равна 1
+  if (course.price === 1) {
+    return null;
+  }
+
   return (
     <div style={{...utils.rowCenter(), ...containerStyle}}>
       {course.oldPrice && (
