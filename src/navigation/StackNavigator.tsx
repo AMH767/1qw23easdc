@@ -28,10 +28,19 @@ const stack = createBrowserRouter([
     element: <screens.PrivacyPolicy />,
   },
   
+
+
+  {
+    path: '/PrivacyMusic',
+    element: <screens.PrivacyMusic />,
+  },
   {
     path: '/PrivacyRaspis',
     element: <screens.PrivacyRaspis />,
   },
+
+
+
 
 
 
