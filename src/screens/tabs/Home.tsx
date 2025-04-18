@@ -13,6 +13,15 @@ import {theme} from '../../constants';
 import {components} from '../../components';
 import {course as elements} from '../../course';
 
+const CATEGORY_PATHS: Record<number, string> = {
+  1: '/ai-chat',
+  2: '/nutrition',
+  3: '/pools',
+  4: '/training-plan',
+  5: '/music',
+  6: '/video'
+};
+
 export const Home: React.FC = () => {
   const navigate = hooks.useNavigate();
   const location = useLocation();
@@ -251,49 +260,49 @@ export const Home: React.FC = () => {
           slidesPerView={'auto'}
           pagination={{clickable: true}}
         >
-          {categoriesData.map((category: any, index, array) => {
-            return (
-              <SwiperSlide
-                key={category.id}
+          {categoriesData.map((category: any) => (
+            <SwiperSlide
+              key={category.id}
+              style={{
+                width: 'auto',
+                position: 'relative',
+                cursor: 'pointer',
+                userSelect: 'none',
+                padding: '8px 20px',
+                height: 89,
+              }}
+              onClick={() => {
+                navigate(CATEGORY_PATHS[category.id], {
+                  state: {title: category.name}
+                });
+              }}
+            >
+              <img
+                src={category.image}
+                alt={category.name}
                 style={{
-                  width: 'auto',
-                  position: 'relative',
-                  cursor: 'pointer',
-                  userSelect: 'none',
-                  padding: '8px 20px',
-                  height: 89,
+                  position: 'absolute',
+                  width: '100%',
+                  height: '100%',
+                  top: 0,
+                  left: 0,
+                  zIndex: -1,
+                  borderRadius: 10,
+                  objectFit: 'cover',
                 }}
-                onClick={() => {
-                  navigate('/category-list', {state: {title: category.name}});
+              />
+              <text.T14
+                numberOfLines={1}
+                style={{
+                  textTransform: 'capitalize',
+                  ...theme.fonts.Lato_700Bold,
+                  color: theme.colors.white,
                 }}
               >
-                <img
-                  src={category.image}
-                  alt={category.name}
-                  style={{
-                    position: 'absolute',
-                    width: '100%',
-                    height: '100%',
-                    top: 0,
-                    left: 0,
-                    zIndex: -1,
-                    borderRadius: 10,
-                    objectFit: 'cover',
-                  }}
-                />
-                <text.T14
-                  numberOfLines={1}
-                  style={{
-                    textTransform: 'capitalize',
-                    ...theme.fonts.Lato_700Bold,
-                    color: theme.colors.white,
-                  }}
-                >
-                  {category.name}
-                </text.T14>
-              </SwiperSlide>
-            );
-          })}
+                {category.name}
+              </text.T14>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     );

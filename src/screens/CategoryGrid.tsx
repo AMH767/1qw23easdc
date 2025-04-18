@@ -12,6 +12,16 @@ export const CategoryGrid: React.FC = () => {
   const location = useLocation();
   const {pathname} = useLocation();
 
+  // Маппинг ID категорий на английские пути
+  const CATEGORY_PATHS: Record<number, string> = {
+    1: '/ai-chat',
+    2: '/nutrition',
+    3: '/pools',
+    4: '/training-plan',
+    5: '/PrivacyMusic',
+    6: '/video'
+  };
+
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo(0, 0);
@@ -94,7 +104,9 @@ export const CategoryGrid: React.FC = () => {
                     marginBottom: isLast ? 0 : 15,
                   }}
                   onClick={() => {
-                    navigate('/category-list', {state: {title: category.name}});
+                    navigate(CATEGORY_PATHS[category.id], {
+                      state: {title: category.name}
+                    });
                   }}
                 >
                   <img
@@ -146,7 +158,9 @@ export const CategoryGrid: React.FC = () => {
                     padding: '30px 10px',
                   }}
                   onClick={() => {
-                    navigate('/category-list', {state: {title: category.name}});
+                    navigate(CATEGORY_PATHS[category.id], {
+                      state: {title: category.name}
+                    });
                   }}
                 >
                   <img

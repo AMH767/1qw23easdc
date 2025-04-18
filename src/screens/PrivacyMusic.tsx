@@ -18,7 +18,7 @@ interface MusicCategory {
 const musicCategories: MusicCategory[] = [
   {
     id: 1,
-    name: "Популярная музыка",
+    name: "Музыка перед тренировкой",
     tracks: [
       { id: 1, name: "Lions", url: "https://amh767.github.io/api-data/assets/Music/Lions.mp3" },
       { id: 2, name: "Summer Vibes", url: "https://amh767.github.io/api-data/assets/Music/SummerVibes.mp3" },
@@ -34,7 +34,7 @@ const musicCategories: MusicCategory[] = [
   },
   {
     id: 2,
-    name: "Классическая музыка",
+    name: "Музыка перед стартом",
     tracks: [
       { id: 11, name: "Moonlight Sonata", url: "https://amh767.github.io/api-data/assets/Music/MoonlightSonata.mp3" },
       { id: 12, name: "Four Seasons", url: "https://amh767.github.io/api-data/assets/Music/FourSeasons.mp3" },
@@ -50,7 +50,7 @@ const musicCategories: MusicCategory[] = [
   },
   {
     id: 3,
-    name: "Релакс музыка",
+    name: "Спокойная музыка для стайеров",
     tracks: [
       { id: 21, name: "Zen Garden", url: "https://amh767.github.io/api-data/assets/Music/ZenGarden.mp3" },
       { id: 22, name: "Meditation", url: "https://amh767.github.io/api-data/assets/Music/Meditation.mp3" },
@@ -251,26 +251,49 @@ export const PrivacyMusic: React.FC = () => {
   const renderImageBackground = (): JSX.Element => {
     return <components.Background version={1} />;
   };
-
   const renderHeader = (): JSX.Element => {
     return (
-      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+      <div style={{
+        padding: '16px',
+        position: 'sticky',
+        top: 0,
+        zIndex: 100
+      }}>
         <components.Header
           title='Музыкальная библиотека'
           goBack={true}
         />
-        <input
-          type="text"
-          placeholder="Поиск треков..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          style={{
-            padding: '8px 12px',
-            borderRadius: '20px',
-            border: '1px solid #ddd',
-            width: '200px'
-          }}
-        />
+      </div>
+    );
+  };
+  
+  const renderSearch = (): JSX.Element => {
+    return (
+      <div style={{
+        padding: '16px',
+      }}>
+        <div style={{
+          position: 'relative',
+          maxWidth: '500px',
+          margin: '0 auto'
+        }}>
+          <input
+            type="text"
+            placeholder="Поиск треков..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="music-search-input"
+          />
+          <span style={{
+            position: 'absolute',
+            left: '16px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            color: '#999'
+          }}>
+            🔍
+          </span>
+        </div>
       </div>
     );
   };
@@ -352,6 +375,7 @@ export const PrivacyMusic: React.FC = () => {
     <>
       {renderImageBackground()}
       {renderHeader()}
+      {renderSearch()}
       {renderContent()}
       {currentPlaying && renderPlayerControls()}
       <audio ref={audioRef} />
