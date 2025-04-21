@@ -18,7 +18,9 @@ import {CourseDetails} from './CourseDetails';
 import {PaymentFailed} from './PaymentFailed';
 import {PrivacyPolicy} from './PrivacyPolicy';
 import {PrivacyRaspis} from './PrivacyRaspis';
-import {PrivacyMusic} from './PrivacyMusic';
+import {MusicPlayer} from './PrivacyMusic';
+import PrivacyVideo from './PrivacyVideo';
+import PrivacyAichat from './PrivacyAichat';
 
 import {PaymentSuccess} from './PaymentSuccess';
 import {ForgotPassword} from './ForgotPassword';
@@ -61,7 +63,10 @@ export const screens = {
   PaymentFailed,
   PrivacyPolicy,
   PrivacyRaspis,
-  PrivacyMusic,
+  MusicPlayer,
+  PrivacyVideo,
+  PrivacyAichat,
+
 
 
   PaymentSuccess,

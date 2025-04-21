@@ -32,8 +32,20 @@ const stack = createBrowserRouter([
 
   {
     path: '/PrivacyMusic',
-    element: <screens.PrivacyMusic />,
+    element: <screens.MusicPlayer />,
   },
+  {
+    path: '/video',
+    element: <screens.PrivacyVideo />,
+  },
+
+
+  {
+    path: '/ai-chat',
+    element: <screens.PrivacyAichat />,
+  },
+
+
   {
     path: '/PrivacyRaspis',
     element: <screens.PrivacyRaspis />,
