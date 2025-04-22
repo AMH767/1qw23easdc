@@ -15,7 +15,7 @@ const AIChatPage = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Конфигурация API (рекомендуется вынести в .env)
-  const API_KEY = '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';
+  const API_KEY = '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';
   const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
   const MODEL = 'deepseek/deepseek-chat-v3-0324:free';
 

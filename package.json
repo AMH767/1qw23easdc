@@ -2,6 +2,7 @@
   "name": "nuton",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@capacitor/android": "^7.2.0",
     "@capacitor/cli": "^7.2.0",
@@ -33,7 +34,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-pwa": "react-scripts build && serve -s build",
+    "generate-apk": "bubblewrap build",
+    "cap-android": "npx cap add android && npx cap copy"
   },
   "eslintConfig": {
     "extends": [
@@ -52,5 +56,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@bubblewrap/cli": "^1.15.0",
+    "serve": "^14.2.4"
   }
 }
