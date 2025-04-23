@@ -15,7 +15,7 @@ export const CategoryGrid: React.FC = () => {
   // Маппинг ID категорий на английские пути
   const CATEGORY_PATHS: Record<number, string> = {
     1: '/ai-chat',
-    2: '/nutrition',
+    2: '/PrivacyPlanner',
     3: '/pools',
     4: '/training-plan',
     5: '/PrivacyMusic',

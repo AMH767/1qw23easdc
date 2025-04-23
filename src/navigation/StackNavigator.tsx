@@ -34,6 +34,12 @@ const stack = createBrowserRouter([
     path: '/PrivacyMusic',
     element: <screens.MusicPlayer />,
   },
+
+  {
+    path: '/PrivacyPlanner',
+    element: <screens.PrivacyPlanner />,
+  },
+
   {
     path: '/video',
     element: <screens.PrivacyVideo />,
@@ -76,6 +82,12 @@ const stack = createBrowserRouter([
     path: '/course-details',
     element: <screens.CourseDetails />,
   },
+
+  {
+    path: '/coursekrol',
+    element: <screens.CourseKrol />,
+  },
+
   {
     path: '/confirmation-code',
     element: <screens.ConfirmationCode />,

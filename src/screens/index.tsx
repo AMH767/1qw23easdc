@@ -15,10 +15,14 @@ import {BaseintegoryList} from './BaseintegoryList';
 
 import {CategoryGrid} from './CategoryGrid';
 import {CourseDetails} from './CourseDetails';
+import {CourseKrol} from './CourseKrol';
+
 import {PaymentFailed} from './PaymentFailed';
 import {PrivacyPolicy} from './PrivacyPolicy';
 import {PrivacyRaspis} from './PrivacyRaspis';
 import {MusicPlayer} from './PrivacyMusic';
+import PrivacyPlanner from './PrivacyPlanner';
+
 import PrivacyVideo from './PrivacyVideo';
 import PrivacyAichat from './PrivacyAichat';
 
@@ -60,12 +64,16 @@ export const screens = {
   CategoryList,
   BaseintegoryList,
   CourseDetails,
+  CourseKrol,
+
   PaymentFailed,
   PrivacyPolicy,
   PrivacyRaspis,
   MusicPlayer,
   PrivacyVideo,
   PrivacyAichat,
+  PrivacyPlanner,
+
 
 
 

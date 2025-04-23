@@ -15,10 +15,10 @@ import {course as elements} from '../../course';
 
 const CATEGORY_PATHS: Record<number, string> = {
   1: '/ai-chat',
-  2: '/nutrition',
+  2: '/PrivacyPlanner',
   3: '/pools',
   4: '/training-plan',
-  5: '/music',
+  5: '/PrivacyMusic',
   6: '/video'
 };
 
@@ -127,17 +127,17 @@ export const Home: React.FC = () => {
                 marginBottom: 4,
               }}
             />
-            <text.H2 numberOfLines={1}>Hi, Swimmer</text.H2>
+            <text.H2 numberOfLines={1}>Привет Чемпион </text.H2>
           </div>
           <text.T14
             style={{color: theme.colors.bodyTextColor, marginBottom: 12}}
           >
-            Find a course you want to learn.
+            Здесь ты найдешь все для себя
           </text.T14>
           <div
             style={{
               background:
-                'linear-gradient(90deg, rgba(246, 189, 229, 0.5) 0%, rgba(174, 183, 248, 0.5) 100%)',
+                'linear-gradient(90deg, rgba(155, 245, 255, 0.5) 0%, rgba(186, 238, 255, 0.5) 100%)',
               borderRadius: 5,
               padding: '12px 16px',
               display: 'flex',
@@ -145,12 +145,12 @@ export const Home: React.FC = () => {
             }}
           >
             <div style={{marginRight: 8}}>
-              <svg.SearchSvg />
+              
             </div>
             <input
               className='top-placeholder'
               type='text'
-              placeholder='Search'
+              placeholder='Поиск'
               style={{
                 width: '100%',
                 border: 'none',
@@ -334,101 +334,101 @@ export const Home: React.FC = () => {
     );
   };
 
-  const renderPopular = (): JSX.Element => {
-    return (
-      <div style={{marginBottom: 20}}>
-        <components.BlockHeading
-          title='Popular'
-          viewAllOnClick={() => {
-            navigate('/category-list', {state: {title: 'Popular'}});
-          }}
-          containerStyle={{marginBottom: 7, padding: '0 20px'}}
-        />
-        <Swiper
-          spaceBetween={16}
-          slidesPerView={'auto'}
-          pagination={{clickable: true}}
-        >
-          {coursesData.map((course: any, index, array) => {
-            const isLast = index === array.length - 1;
-            return (
-              <SwiperSlide
-                key={course.id}
-                style={{
-                  width: 230,
-                  cursor: 'pointer',
-                  userSelect: 'none',
-                  borderRadius: 10,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  position: 'relative',
-                }}
-                onClick={() => {
-                  navigate('/course-details', {state: {course}});
-                }}
-              >
-                <div
-                  style={{
-                    position: 'relative',
-                    width: '100%',
-                    height: 120,
-                    marginBottom: 10,
-                  }}
-                >
-                  <img
-                    src={course.bigPreview}
-                    alt={course.name}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      position: 'absolute',
-                      borderRadius: 10,
-                      inset: 0,
-                    }}
-                  />
-                  <elements.CourseRating
-                    course={course}
-                    containerStyle={{
-                      position: 'absolute',
-                      left: 2,
-                      bottom: 2,
-                    }}
-                  />
-                  <elements.CourseInWishlist
-                    course={course}
-                    size={20}
-                    style={{
-                      position: 'absolute',
-                      right: 0,
-                      top: 0,
-                      margin: 10,
-                    }}
-                    customFillColor={theme.colors.white}
-                    customStrokeColor={theme.colors.white}
-                  />
-                </div>
-                <div style={{display: 'flex'}}>
-                  <div style={{marginRight: 8}}>
-                    <svg.PlaySvg />
-                  </div>
-                  <div>
-                    <elements.CourseName
-                      course={course}
-                      numberOfLines={1}
-                      shortName={true}
-                    />
-                    <text.T16 style={{color: theme.colors.secondaryTextColor}}>
-                      London Universiry
-                    </text.T16>
-                  </div>
-                </div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div>
-    );
-  };
+  // const renderPopular = (): JSX.Element => {
+  //   return (
+  //     <div style={{marginBottom: 20}}>
+  //       <components.BlockHeading
+  //         title='Popular'
+  //         viewAllOnClick={() => {
+  //           navigate('/category-list', {state: {title: 'Popular'}});
+  //         }}
+  //         containerStyle={{marginBottom: 7, padding: '0 20px'}}
+  //       />
+  //       <Swiper
+  //         spaceBetween={16}
+  //         slidesPerView={'auto'}
+  //         pagination={{clickable: true}}
+  //       >
+  //         {coursesData.map((course: any, index, array) => {
+  //           const isLast = index === array.length - 1;
+  //           return (
+  //             <SwiperSlide
+  //               key={course.id}
+  //               style={{
+  //                 width: 230,
+  //                 cursor: 'pointer',
+  //                 userSelect: 'none',
+  //                 borderRadius: 10,
+  //                 display: 'flex',
+  //                 flexDirection: 'column',
+  //                 position: 'relative',
+  //               }}
+  //               onClick={() => {
+  //                 navigate('/course-details', {state: {course}});
+  //               }}
+  //             >
+  //               <div
+  //                 style={{
+  //                   position: 'relative',
+  //                   width: '100%',
+  //                   height: 120,
+  //                   marginBottom: 10,
+  //                 }}
+  //               >
+  //                 <img
+  //                   src={course.bigPreview}
+  //                   alt={course.name}
+  //                   style={{
+  //                     width: '100%',
+  //                     height: '100%',
+  //                     position: 'absolute',
+  //                     borderRadius: 10,
+  //                     inset: 0,
+  //                   }}
+  //                 />
+  //                 <elements.CourseRating
+  //                   course={course}
+  //                   containerStyle={{
+  //                     position: 'absolute',
+  //                     left: 2,
+  //                     bottom: 2,
+  //                   }}
+  //                 />
+  //                 <elements.CourseInWishlist
+  //                   course={course}
+  //                   size={20}
+  //                   style={{
+  //                     position: 'absolute',
+  //                     right: 0,
+  //                     top: 0,
+  //                     margin: 10,
+  //                   }}
+  //                   customFillColor={theme.colors.white}
+  //                   customStrokeColor={theme.colors.white}
+  //                 />
+  //               </div>
+  //               <div style={{display: 'flex'}}>
+  //                 <div style={{marginRight: 8}}>
+  //                   <svg.PlaySvg />
+  //                 </div>
+  //                 <div>
+  //                   <elements.CourseName
+  //                     course={course}
+  //                     numberOfLines={1}
+  //                     shortName={true}
+  //                   />
+  //                   <text.T16 style={{color: theme.colors.secondaryTextColor}}>
+  //                     London Universiry
+  //                   </text.T16>
+  //                 </div>
+  //               </div>
+  //             </SwiperSlide>
+  //           );
+  //         })}
+  //       </Swiper>
+  //     </div>
+  //   );
+  // };
 
   const renderContent = (): JSX.Element => {
     return (
@@ -438,7 +438,7 @@ export const Home: React.FC = () => {
         {renderCarousel()}
         {renderCategories()}
         {renderTopRatedCourses()}
-        {renderPopular()}
+        {/* {renderPopular()} */}
       </main>
     );
   };

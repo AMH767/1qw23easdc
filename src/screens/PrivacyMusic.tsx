@@ -23,7 +23,7 @@ const musicCategories: MusicCategory[] = [
   {
     id: 1,
     name: "Энергичная музыка",
-    cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4",
+    cover: "https://raw.githubusercontent.com/AMH767/api-data/refs/heads/main/assets/category/banner.jpg",
     tracks: [
       { id: 1, name: "Lions", artist: "Electro Beats", duration: 213, url: "https://amh767.github.io/api-data/assets/Music/Lions.mp3" },
       { id: 2, name: "Summer Vibes", artist: "Tropical Sounds", duration: 187, url: "https://amh767.github.io/api-data/assets/Music/SummerVibes.mp3" },
@@ -35,7 +35,7 @@ const musicCategories: MusicCategory[] = [
   {
     id: 2,
     name: "Классическая музыка",
-    cover: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad",
+    cover: "https://raw.githubusercontent.com/AMH767/api-data/refs/heads/main/assets/category/banner.jpg",
     tracks: [
       { id: 6, name: "Moonlight Sonata", artist: "Beethoven", duration: 356, url: "https://amh767.github.io/api-data/assets/Music/MoonlightSonata.mp3" },
       { id: 7, name: "Four Seasons", artist: "Vivaldi", duration: 412, url: "https://amh767.github.io/api-data/assets/Music/FourSeasons.mp3" },
@@ -47,7 +47,7 @@ const musicCategories: MusicCategory[] = [
   {
     id: 3,
     name: "Медитативная музыка",
-    cover: "https://images.unsplash.com/photo-1518604666860-9ed391f76460",
+    cover: "https://raw.githubusercontent.com/AMH767/api-data/refs/heads/main/assets/category/banner.jpg",
     tracks: [
       { id: 11, name: "Zen Garden", artist: "Peaceful Sounds", duration: 453, url: "https://amh767.github.io/api-data/assets/Music/ZenGarden.mp3" },
       { id: 12, name: "Meditation", artist: "Mindful Melodies", duration: 512, url: "https://amh767.github.io/api-data/assets/Music/Meditation.mp3" },
@@ -304,10 +304,7 @@ export const MusicPlayer: React.FC = () => {
       <div className="background-overlay"></div>
 
       {/* Header */}
-      <header className="music-header">
-        <h1>Музыкальная библиотека</h1>
-        <p>Найдите идеальный саундтрек для вашей тренировки</p>
-      </header>
+
 
       {/* Search */}
       <div className="music-search">
@@ -408,7 +405,7 @@ export const MusicPlayer: React.FC = () => {
           left: 0;
           right: 0;
           bottom: 0;
-          background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+          background: linear-gradient(135deg, #3abecd94 0%, #aee1ff 100%);
           z-index: -1;
         }
 
@@ -430,6 +427,7 @@ export const MusicPlayer: React.FC = () => {
 
         .music-search {
           padding: 0 1.5rem 1.5rem;
+          padding-top: 20px;
         }
 
         .search-container {
