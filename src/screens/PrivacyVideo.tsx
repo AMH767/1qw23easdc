@@ -120,6 +120,13 @@ const VideoGallery = () => {
               onClick={() => handleVideoClick(video.id)}
             >
               <div className="video-thumbnail">
+              <a 
+    href={video.url.replace('embed/', 'watch?v=')} 
+    target="_blank" 
+    rel="noopener noreferrer"
+
+    className="thumbnail-link"
+  >
                 <div className="video-wrapper">
                   <iframe
                     src={video.url}
@@ -134,8 +141,16 @@ const VideoGallery = () => {
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </div>
+                </a>
               </div>
               
+
+
+
+
+
+
+
               <div className="video-info">
                 <h2 className="video-title">{video.title}</h2>
                 <p className="video-description">
@@ -150,10 +165,13 @@ const VideoGallery = () => {
                   {activeVideo === video.id ? 'Свернуть' : 'Подробнее'}
                 </button>
               </div>
+              
             </div>
+            
           ))}
         </div>
       )}
+      
     </div>
   );
 };
