@@ -72,7 +72,7 @@ const PrivacyPlanner = () => {
     
     const mealToAdd = {
       ...newMeal,
-      id: Date.now(), // Используем timestamp как временный ID
+      id: Date.now(),
     };
 
     setMealsData(prev => ({
@@ -92,91 +92,136 @@ const PrivacyPlanner = () => {
       }`}
       onClick={() => handleMealSelect(meal)}
     >
-      <h3>{meal.name}</h3>
+      <div className="meal-card-header">
+        <h3>{meal.name}</h3>
+        <div className="meal-card-badge">
+          {selectedMeals[activeTab]?.id === meal.id && '✓'}
+        </div>
+      </div>
       <div className="meal-info">
-        <span>🍴 {meal.calories} ккал</span>
-        <span>💪 {meal.protein}г белка</span>
+        <div className="info-item">
+          <span className="icon">🔥</span>
+          <span>{meal.calories} ккал</span>
+        </div>
+        <div className="info-item">
+          <span className="icon">💪</span>
+          <span>{meal.protein}г белка</span>
+        </div>
       </div>
     </div>
   );
 
   return (
     <div className="meal-planner">
-      <h1>План питания для пловцов</h1>
-      
-      <div className="tabs">
-        {Object.keys(mealsData).map((tab) => (
-          <button
-            key={tab}
-            className={activeTab === tab ? 'active' : ''}
-            onClick={() => setActiveTab(tab as MealType)}
-          >
-            {tab.charAt(0).toUpperCase() + tab.slice(1)}
-          </button>
-        ))}
+      <header className="header">
+        <h1>🏊 План питания для пловцов</h1>
+        <div className="total-calories-box">
+          <span>Всего калорий:</span>
+          <div className="total-value">{totalCalories}</div>
+        </div>
+      </header>
+
+      <div className="tabs-container">
+        <div className="tabs">
+          {Object.keys(mealsData).map((tab) => (
+            <button
+              key={tab}
+              className={`tab-btn ${activeTab === tab ? 'active' : ''}`}
+              onClick={() => setActiveTab(tab as MealType)}
+            >
+              <span className="tab-icon">
+                {tab === 'breakfast' && '☀️'}
+                {tab === 'lunch' && '🌞'}
+                {tab === 'dinner' && '🌙'}
+                {tab === 'snacks' && '🍎'}
+              </span>
+              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+            </button>
+          ))}
+        </div>
       </div>
 
-      <div className="controls">
-        <button 
-          className="add-meal-btn"
-          onClick={() => setShowAddMealForm(true)}
-        >
-          + Добавить блюдо
-        </button>
+      <div className="content-container">
+        <div className="meal-list">
+          {mealsData[activeTab].map(renderMealCard)}
+          <button 
+            className="add-meal-card"
+            onClick={() => setShowAddMealForm(true)}
+          >
+            + Добавить блюдо
+          </button>
+        </div>
+
+        <div className="selected-meals">
+          <h2 className="selected-title">Ваш выбор:</h2>
+          <div className="selected-list">
+            {Object.entries(selectedMeals).map(([time, meal]) => (
+              <div key={time} className="selected-item">
+                <span className="meal-time">{time}:</span>
+                <span className="meal-name">{meal?.name}</span>
+                <span className="meal-calories">{meal?.calories} ккал</span>
+              </div>
+            ))}
+            {Object.keys(selectedMeals).length === 0 && (
+              <div className="empty-state">
+                🍽️ Выберите блюда из списка
+              </div>
+            )}
+          </div>
+        </div>
       </div>
 
       {showAddMealForm && (
-        <div className="add-meal-form">
-          <h3>Добавить новое блюдо</h3>
-          <div className="form-group">
-            <label>Название:</label>
-            <input
-              type="text"
-              value={newMeal.name}
-              onChange={(e) => setNewMeal({...newMeal, name: e.target.value})}
-              placeholder="Название блюда"
-            />
-          </div>
-          <div className="form-group">
-            <label>Калории:</label>
-            <input
-              type="number"
-              value={newMeal.calories}
-              onChange={(e) => setNewMeal({...newMeal, calories: +e.target.value})}
-              placeholder="Калории"
-            />
-          </div>
-          <div className="form-group">
-            <label>Белки (г):</label>
-            <input
-              type="number"
-              value={newMeal.protein}
-              onChange={(e) => setNewMeal({...newMeal, protein: +e.target.value})}
-              placeholder="Белки"
-            />
-          </div>
-          <div className="form-buttons">
-            <button onClick={handleAddMeal}>Добавить</button>
-            <button onClick={() => setShowAddMealForm(false)}>Отмена</button>
+        <div className="modal-overlay">
+          <div className="modal">
+            <h3>Добавить новое блюдо</h3>
+            <div className="form-group">
+              <input
+                type="text"
+                value={newMeal.name}
+                onChange={(e) => setNewMeal({...newMeal, name: e.target.value})}
+                placeholder="Название блюда"
+                className="input-field"
+              />
+            </div>
+            <div className="form-row">
+              <div className="form-group">
+                <input
+                  type="number"
+                  value={newMeal.calories}
+                  onChange={(e) => setNewMeal({...newMeal, calories: +e.target.value})}
+                  placeholder="Калории"
+                  className="input-field"
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  type="number"
+                  value={newMeal.protein}
+                  onChange={(e) => setNewMeal({...newMeal, protein: +e.target.value})}
+                  placeholder="Белки (г)"
+                  className="input-field"
+                />
+              </div>
+            </div>
+            <div className="modal-actions">
+              <button 
+                className="btn-secondary"
+                onClick={() => setShowAddMealForm(false)}
+              >
+                Отмена
+              </button>
+              <button 
+                className="btn-primary"
+                onClick={handleAddMeal}
+                disabled={!newMeal.name.trim()}
+              >
+                Добавить
+              </button>
+            </div>
           </div>
         </div>
       )}
-
-      <div className="meal-list">
-        {mealsData[activeTab].map(renderMealCard)}
-      </div>
-
-      <div className="selected-meals">
-        <h2>Ваш выбор:</h2>
-        {Object.entries(selectedMeals).map(([time, meal]) => (
-          <div key={time} className="selected-meal">
-            <strong>{time}:</strong> {meal?.name} ({meal?.calories} ккал)
-          </div>
-        ))}
-        <div className="total-calories">
-          Всего калорий: {totalCalories}
-        </div>
-      </div>
     </div>
   );
 };
