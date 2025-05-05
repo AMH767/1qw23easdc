@@ -14,10 +14,10 @@ const AIChatPage = () => {
   const [error, setError] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Конфигурация API (рекомендуется вынести в .env)
-  const API_KEY = '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';
-  const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
-  const MODEL = 'deepseek/deepseek-chat-v3-0324:free';
+  // Конфигурация Mistral API
+  const API_KEY = 'Q1XPLfhh50q4Ok3ybNfPWh2ghNohjN2i';
+  const API_URL = 'https://api.mistral.ai/v1/chat/completions';
+  const MODEL = 'mistral-tiny'; // Доступные модели: mistral-tiny, mistral-small, mistral-medium
 
   // Автопрокрутка к новым сообщениям
   const scrollToBottom = () => {
@@ -42,7 +42,8 @@ const AIChatPage = () => {
         model: MODEL,
         messages: [...messages, userMessage],
         temperature: 0.7,
-        max_tokens: 1000
+        max_tokens: 1000,
+        stream: false // Отключаем streaming для простоты
       };
 
       const response = await fetch(API_URL, {
@@ -50,8 +51,7 @@ const AIChatPage = () => {
         headers: {
           'Authorization': `Bearer ${API_KEY}`,
           'Content-Type': 'application/json',
-          'HTTP-Referer': window.location.href, // Важно для OpenRouter
-          'X-Title': 'AI Chat App'             // Важно для OpenRouter
+          'Accept': 'application/json'
         },
         body: JSON.stringify(payload)
       });
@@ -75,7 +75,7 @@ const AIChatPage = () => {
 
     } catch (err) {
       console.error('Request Error:', err);
-      setError(`Ошибка: ${(err as Error).message}. Проверьте настройки приватности OpenRouter.`);
+      setError(`Ошибка: ${(err as Error).message}. Проверьте ваш API ключ и доступ к Mistral API.`);
     } finally {
       setIsLoading(false);
     }
@@ -85,7 +85,7 @@ const AIChatPage = () => {
     <div className="chat-container">
       <header className="chat-header">
         <h1>🤖 ИИ Чат-Помощник</h1>
-        <div className="model-badge">{MODEL.split('/')[1]}</div>
+        <div className="model-badge">{MODEL}</div>
       </header>
 
       {error && (
@@ -93,9 +93,6 @@ const AIChatPage = () => {
           <div className="error-icon">⚠️</div>
           <div className="error-content">
             <p>{error}</p>
-            <a href="https://openrouter.ai/settings/privacy" target="_blank" rel="noopener noreferrer">
-              Проверить настройки приватности →
-            </a>
           </div>
         </div>
       )}
@@ -151,7 +148,6 @@ const AIChatPage = () => {
             </svg>
           </button>
         </div>
-        
       </div>
     </div>
   );

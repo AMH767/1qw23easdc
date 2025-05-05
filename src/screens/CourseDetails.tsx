@@ -16,98 +16,137 @@ import {course as elements} from '../course';
 
 const lessons = [
   {
-    id: 1,
-    title: '01. Introduction',
-    lecture: '3 lectures',
-    duration: '7 min',
+    id: '1',
+    title: '01. Базовые упражнения',
+    lecture: '4 упражнения',
+    duration: '20 мин',
     content: [
       {
-        id: 1,
-        title: 'Setting up individual Camera Rigs',
-        duration: '00:44',
+        id: '1-1',
+        title: '🐬 Дельфин на груди с руками вдоль тела',
+        duration: '05:00',
+        description: `
+          <strong>Цель:</strong> отработка бедренной волны и правильной позиции тела в воде.<br/><br/>
+          <strong>Как выполнять:</strong><br/>
+          - Ляг на воду, руки вдоль тела<br/>
+          - Выполняй дельфинообразные движения телом, начиная волну от груди<br/>
+          - Держи корпус расслабленным, движения мягкими<br/><br/>
+          <em>🌀 Совет:</em> представь, что ты — волна, катящаяся по поверхности воды.
+        `,
       },
       {
-        id: 2,
-        title: 'Setting Up VRTKs Tracked Alias',
-        duration: '03:49',
+        id: '1-2',
+        title: '✋ Баттерфляй с одной рукой',
+        duration: '05:00',
+        description: `
+          <strong>Цель:</strong> изоляция и отработка движения одной руки.<br/><br/>
+          <strong>Как выполнять:</strong><br/>
+          - Плыви баттерфляем, работая только одной рукой<br/>
+          - Вторая рука вытянута вперёд или вдоль тела<br/>
+          - На каждый гребок — два удара ногами<br/><br/>
+          <em>🔥 Совет:</em> следи, чтобы корпус не "проваливался" в воду.
+        `,
       },
       {
-        id: 3,
-        title: 'Setting Up VRTKs Tracked Alias',
-        duration: '02:22',
+        id: '1-3',
+        title: '🌊 Волнообразные движения с доской',
+        duration: '05:00',
+        description: `
+          <strong>Цель:</strong> развитие правильной волны тела.<br/><br/>
+          <strong>Как выполнять:</strong><br/>
+          - Держи доску перед собой на вытянутых руках<br/>
+          - Сосредоточься на волнообразном движении от груди к ногам<br/>
+          - Избегай резких сгибаний в коленях<br/><br/>
+          <em>💦 Совет:</em> представь, что твоё тело — это хлыст.
+        `,
+      },
+      {
+        id: '1-4',
+        title: '🧘‍♂️ Дыхание с паузами',
+        duration: '05:00',
         locked: true,
+        description: `
+          <strong>Цель:</strong> синхронизация дыхания с движениями.<br/><br/>
+          <strong>Как выполнять:</strong><br/>
+          - Выполняй стандартный баттерфляй<br/>
+          - Делай вдох только через каждые 2-3 цикла<br/>
+          - Концентрируйся на плавности<br/><br/>
+          <em>🌬️ Совет:</em> выдох начинай сразу после входа в воду.
+        `,
       },
     ],
   },
   {
-    id: 2,
-    title: '02. Movement in VR',
-    lecture: '8 lectures',
-    duration: '1h 33 min',
+    id: '2',
+    title: '02. Техника в воде',
+    lecture: '5 упражнений',
+    duration: '25 мин',
     content: [
       {
-        id: 1,
-        title: 'Setting up individual Camera Rigs',
-        duration: '00:44',
+        id: '2-1',
+        title: '🌪 Баттерфляй с задержкой дыхания',
+        duration: '05:00',
+        description: `
+          <strong>Цель:</strong> развитие ритма и силы.<br/><br/>
+          <strong>Как выполнять:</strong><br/>
+          - Плыви баттерфляем без вдохов 5-7 метров<br/>
+          - Сохраняй технику даже при усталости<br/>
+          - Делай акцент на мощном выдохе в воду<br/><br/>
+          <em>💪 Совет:</em> это упражнение отлично развивает выносливость.
+        `,
       },
       {
-        id: 2,
-        title: 'Setting Up VRTKs Tracked Alias',
-        duration: '03:49',
+        id: '2-2',
+        title: '🔄 Баттерфляй с паузами',
+        duration: '05:00',
+        description: `
+          <strong>Цель:</strong> осознанность каждого движения.<br/><br/>
+          <strong>Как выполнять:</strong><br/>
+          - После каждого гребка делай паузу 1-2 секунды<br/>
+          - Контролируй положение тела в фазе скольжения<br/>
+          - Следи за симметрией движений<br/><br/>
+          <em>👁️ Совет:</em> полезно выполнять перед зеркалом на дне.
+        `,
       },
       {
-        id: 3,
-        title: 'Setting Up VRTKs Tracked Alias',
-        duration: '02:22',
+        id: '2-3',
+        title: '🏋️‍♂️ Удары дельфином с доской',
+        duration: '05:00',
+        description: `
+          <strong>Цель:</strong> усиление ног и развитие волны.<br/><br/>
+          <strong>Как выполнять:</strong><br/>
+          - Держи доску перед собой на вытянутых руках<br/>
+          - Выполняй мощные волнообразные удары<br/>
+          - Старайся не "бить" по воде, а проходить сквозь неё<br/><br/>
+          <em>⚡ Совет:</em> можно выполнять на спине для разнообразия.
+        `,
+      },
+      {
+        id: '2-4',
+        title: '🤸‍♀️ Баттерфляй на боку',
+        duration: '05:00',
+        description: `
+          <strong>Цель:</strong> улучшение ротации тела.<br/><br/>
+          <strong>Как выполнять:</strong><br/>
+          - Плыви на боку, выполняя гребки одной рукой<br/>
+          - Вторая рука прижата к бедру<br/>
+          - Меняй стороны через каждые 25 метров<br/><br/>
+          <em>🔄 Совет:</em> помогает исправить асимметрию в технике.
+        `,
+      },
+      {
+        id: '2-5',
+        title: '🌈 Комбинации: 3 кроля — 3 баттерфляя',
+        duration: '05:00',
         locked: true,
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: '03. Distance Grabber',
-    lecture: '8 lectures',
-    duration: '1h 33 min',
-    content: [
-      {
-        id: 1,
-        title: 'Setting up individual Camera Rigs',
-        duration: '00:44',
-      },
-      {
-        id: 2,
-        title: 'Setting Up VRTKs Tracked Alias',
-        duration: '03:49',
-      },
-      {
-        id: 3,
-        title: 'Setting Up VRTKs Tracked Alias',
-        duration: '02:22',
-        locked: true,
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: '04. Snap Zones',
-    lecture: '8 lectures',
-    duration: '1h 33 min',
-    content: [
-      {
-        id: 1,
-        title: 'Setting up individual Camera Rigs',
-        duration: '00:44',
-      },
-      {
-        id: 2,
-        title: 'Setting Up VRTKs Tracked Alias',
-        duration: '03:49',
-      },
-      {
-        id: 3,
-        title: 'Setting Up VRTKs Tracked Alias',
-        duration: '02:22',
-        locked: true,
+        description: `
+          <strong>Цель:</strong> координация между стилями.<br/><br/>
+          <strong>Как выполнять:</strong><br/>
+          - Чередуй три гребка кролем и три цикла баттерфляем<br/>
+          - Следи за плавностью перехода<br/>
+          - Держи стабильное положение корпуса<br/><br/>
+          <em>🎯 Совет:</em> помогает включать баттерфляй в комплексные тренировки.
+        `,
       },
     ],
   },
@@ -115,133 +154,82 @@ const lessons = [
 
 const tabs = [
   {
-    id: 1,
-    name: 'Description',
-  },
-  {
-    id: 2,
-    name: 'Lessons',
-  },
-  {
-    id: 3,
-    name: 'Instructor',
-  },
-  {
-    id: 4,
-    name: 'Reviews',
-  },
-];
-
-const reviews = [
-  {
-    id: 1,
-    name: 'Lillian Davis',
-    rating: 5,
-    date: 'March 3, 2022',
-    comment: 'Lots of good info.',
-    avatar: 'https://george-fx.github.io/nuton_api/assets/users/02.jpg',
-  },
-  {
-    id: 2,
-    name: 'Adam Thompson',
-    rating: 5,
-    date: 'March 28, 2022',
-    comment: 'Great course!',
-    avatar: 'https://george-fx.github.io/nuton_api/assets/users/03.jpg',
-  },
-  {
-    id: 3,
-    name: 'Ryan Howard',
-    rating: 5,
-    date: 'February 12, 2022',
-    comment: 'It was a great course.',
-    avatar: 'https://george-fx.github.io/nuton_api/assets/users/04.jpg',
+    id: 'lessons',
+    name: 'Упражнения',
   },
 ];
 
 export const CourseDetails: React.FC = () => {
   const location = useLocation();
   const {pathname} = useLocation();
-
   const navigate = hooks.useNavigate();
-
-  const course = location.state.course;
+  const course = location.state?.course || {
+    name: 'Совершенствование техники плавания баттерфляем',
+    innerPreview: 'https://via.placeholder.com/800x450?text=Butterfly+Swimming',
+    instructor: {
+      name: 'Алексей Петров',
+      bio: 'Мастер спорта по плаванию, тренер с 10-летним опытом',
+      avatar: 'https://via.placeholder.com/100?text=AP',
+    },
+  };
 
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
   const [coursesData, setCoursesData] = useState<any>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [openItem, setOpenItem] = useState<string | null>(null);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
-    const scrollToTop = () => {
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTop = 0;
-    };
-
-    scrollToTop();
+    window.scrollTo(0, 0);
   }, [pathname]);
-
-  const getData = async () => {
-    setLoading(true);
-
-    try {
-      const results = await Promise.allSettled([
-        axios.get(URLS.GET_COURSES),
-        // axios.get(URLS.GET_BANNERS),
-      ]);
-
-      const coursesResponse = results[0];
-
-      if (coursesResponse.status === 'fulfilled') {
-        setCoursesData(coursesResponse.value.data.courses);
-      } else {
-        console.error('Error fetching courses:', coursesResponse.reason);
-      }
-
-      // const productsResponse = results[0];
-      // const bannersResponse = results[1];
-
-      // if (productsResponse.status === 'fulfilled') {
-      //   setProductsData(productsResponse.value.data.products);
-      // } else {
-      //   console.error('Error fetching products:', productsResponse.reason);
-      // }
-
-      // if (bannersResponse.status === 'fulfilled') {
-      //   setBannersData(bannersResponse.value.data.banners);
-      // } else {
-      //   console.error('Error fetching banners:', bannersResponse.reason);
-      // }
-    } catch (error) {
-      console.error('Unexpected error:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  const renderImageBackground = (): JSX.Element => {
-    return <components.Background version={1} />;
-  };
 
   const renderPreviewImage = (): JSX.Element => {
     return (
-      <div
-        style={{marginTop: 20, marginBottom: 20}}
-        className='container'
-      >
-        <img
-          src={course.innerPreview}
-          alt='preview'
+      <div className="container" style={{marginTop: 20, marginBottom: 20, position: 'relative'}}>
+        <div style={{
+          width: '100%',
+          height: 200,
+          borderRadius: 16,
+          overflow: 'hidden',
+          boxShadow: '0 8px 24px rgba(0,0,0,0.1)',
+        }}>
+          <img
+            src={course.innerPreview}
+            alt="preview"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              opacity: isImageLoaded ? 1 : 0,
+              transition: 'opacity 0.3s ease',
+            }}
+            onLoad={() => setIsImageLoaded(true)}
+          />
+          {!isImageLoaded && (
+            <div style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: '#f0f0f0',
+            }} />
+          )}
+        </div>
+        <div 
           style={{
-            width: '100%',
-            objectFit: 'cover',
-            borderRadius: 10,
+            position: 'absolute',
+            bottom: 16,
+            right: 16,
+            backgroundColor: 'rgba(0,0,0,0.7)',
+            color: 'white',
+            padding: '4px 8px',
+            borderRadius: 4,
+            fontSize: 12,
           }}
-        />
+        >
+          ⏱️ 45 мин
+        </div>
       </div>
     );
   };
@@ -258,36 +246,49 @@ export const CourseDetails: React.FC = () => {
 
   const renderTitle = (): JSX.Element => {
     return (
-      <div className='container'>
-        <text.H4
-          style={{marginBottom: 6}}
-          numberOfLines={2}
-        >
+      <div className="container">
+        <text.H3 style={{marginBottom: 6, lineHeight: 1.3}}>
           {course.name}
-        </text.H4>
+        </text.H3>
+        <div style={{display: 'flex', alignItems: 'center', marginTop: 8}}>
+          <img 
+            src={course.instructor.avatar} 
+            alt={course.instructor.name}
+            style={{
+              width: 32,
+              height: 32,
+              borderRadius: '50%',
+              marginRight: 8,
+              objectFit: 'cover',
+            }}
+          />
+          <text.T14 style={{color: theme.colors.secondaryTextColor}}>
+            {course.instructor.name}
+          </text.T14>
+        </div>
       </div>
     );
   };
 
   const renderRating = (): JSX.Element => {
     return (
-      <div
-        style={{...utils.rowCenter({gap: 6}), marginBottom: 20}}
-        className='container'
-      >
-        <div style={{...utils.rowCenter({gap: 3})}}>
-          <text.T10
-            style={{
-              ...theme.fonts.Lato_700Bold,
-              color: '#FFC700',
-              marginTop: 3,
-            }}
-          >
-            5.0
-          </text.T10>
-          <components.Rating />
+      <div style={{...utils.rowCenter({gap: 12}), marginBottom: 20, padding: '12px 0'}} className="container">
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          background: 'rgba(255, 199, 0, 0.1)',
+          borderRadius: 20,
+          padding: '6px 12px',
+        }}>
+          <svg.StarSvg />
+          <text.T14 style={{...theme.fonts.Lato_700Bold, color: '#FFC700', marginLeft: 4}}>
+            4.9
+          </text.T14>
         </div>
-        <text.T10>(149 ratings) 2,719 students</text.T10>
+        <div style={{flex: 1, height: 1, background: '#e0e0e0'}} />
+        <text.T14 style={{color: theme.colors.secondaryTextColor}}>
+          👥 1,234 учеников
+        </text.T14>
       </div>
     );
   };
@@ -300,442 +301,200 @@ export const CourseDetails: React.FC = () => {
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'space-between',
-          paddingBottom: 20,
+          paddingBottom: 12,
+          borderBottom: `1px solid #e0e0e0`,
+          marginBottom: 16,
         }}
-        className='container'
+        className="container"
       >
-        {tabs.map((item, index, array) => {
-          const isLast = index === array.length - 1;
-          return (
-            <div
-              className={selectedTab.id === item.id ? 'custom-block' : ''}
-              key={item.id}
+        {tabs.map((item) => (
+          <div
+            key={item.id}
+            style={{
+              cursor: 'pointer',
+              userSelect: 'none',
+              ...utils.rowCenter(),
+              padding: '12px 0',
+              position: 'relative',
+            }}
+            onClick={() => setSelectedTab(item)}
+          >
+            <span
               style={{
-                cursor: 'pointer',
-                userSelect: 'none',
-                ...utils.rowCenter(),
-                padding: '14px 10px',
+                color: selectedTab.id === item.id ? theme.colors.mainColor : theme.colors.secondaryTextColor,
+                ...theme.fonts.Lato_700Bold,
+                fontSize: 14,
               }}
-              onClick={() => setSelectedTab(item)}
             >
-              <span
-                style={{
-                  color:
-                    selectedTab.id === item.id
-                      ? theme.colors.mainColor
-                      : theme.colors.secondaryTextColor,
-                  ...theme.fonts.LeagueSpartan_600SemiBold,
-                  fontSize: 8,
-                  textTransform: 'uppercase',
-                }}
-              >
-                {item.name}
-              </span>
-            </div>
-          );
-        })}
+              {item.name}
+            </span>
+            {selectedTab.id === item.id && (
+              <div style={{
+                position: 'absolute',
+                bottom: -13,
+                left: 0,
+                right: 0,
+                height: 3,
+                background: theme.colors.mainColor,
+                borderRadius: 3,
+              }} />
+            )}
+          </div>
+        ))}
       </div>
     );
   };
 
-
-
-
-
-
-
-
-  const renderAboutCourse = (): JSX.Element | null => {
-    if (selectedTab.id === 1) {
-      return (
-        <div
-          className='container'
-          style={{marginBottom: 20}}
-        >
-          <text.H5 style={{marginBottom: 10}}>About Course</text.H5>
-          <span style={{...utils.rowCenter({gap: 10}), marginBottom: 6}}>
-            <svg.UserSvg />
-            <text.T16>{course.author}</text.T16>
-          </span>
-          <span style={{...utils.rowCenter({gap: 10}), marginBottom: 6}}>
-            <svg.VideoSvg />
-            <text.T16>14 hours on-demand video</text.T16>
-          </span>
-          <span style={{...utils.rowCenter({gap: 10}), marginBottom: 6}}>
-            <svg.DownloadSvg />
-            <text.T16>16 downloadable resources</text.T16>
-          </span>
-          <span style={{...utils.rowCenter({gap: 10}), marginBottom: 10}}>
-            <svg.CertificateSvg />
-            <text.T16>Certificate of completion</text.T16>
-          </span>
-          <text.T16 style={{marginBottom: 25}}>
-            Welcome to Udemy's first, No Coding Required, VR development course,
-            using VRTK 4. Build once and deploy to both Oculus.
-          </text.T16>
-          
-          {/* Добавленный план тренировки */}
-          <div style={{marginBottom: 25, padding: 15, background: '#f5f5f5', borderRadius: 8}}>
-            <text.H5 style={{marginBottom: 10}}>🏊‍♂️ План тренировки: 2300 метров</text.H5>
-            
-            <text.T16 style={{fontWeight: 'bold', marginBottom: 5}}>🔥 Разминка (600 метров)</text.T16>
-            <text.T16 style={{marginBottom: 5}}>300 метров произвольно</text.T16>
-            <text.T16 style={{fontStyle: 'italic', marginBottom: 10}}>🏝️ "Разогреваемся и настраиваемся!"</text.T16>
-            
-            <text.T16 style={{marginBottom: 5}}>200 метров ноги с доской</text.T16>
-            <text.T16 style={{fontStyle: 'italic', marginBottom: 10}}>🦵 "Работаем над мощным ударом!"</text.T16>
-            
-            <text.T16 style={{marginBottom: 5}}>100 метров вольный стиль с изменением дыхания</text.T16>
-            <text.T16 style={{fontStyle: 'italic', marginBottom: 10}}>🌬️ "Контроль дыхания = больше выносливости!"</text.T16>
-            
-            <text.T16 style={{marginBottom: 15}}>🔁 Повторите дважды.</text.T16>
-            
-            <text.T16 style={{fontWeight: 'bold', marginBottom: 5}}>💪 Основная часть (1400 метров)</text.T16>
-            <text.T16 style={{marginBottom: 5}}>3 × 300 метров вольный стиль</text.T16>
-            <text.T16 style={{fontStyle: 'italic', marginBottom: 10}}>⏱️ "Держим темп, не сбавляем!"</text.T16>
-            
-            <text.T16 style={{marginBottom: 5}}>500 метров вольный стиль с акцентом на технику</text.T16>
-            <text.T16 style={{fontStyle: 'italic', marginBottom: 10}}>🧠 "Длинный гребок = меньше усталости!"</text.T16>
-            
-            <text.T16 style={{fontWeight: 'bold', marginBottom: 5}}>🧘 Заключение (300 метров)</text.T16>
-            <text.T16 style={{marginBottom: 5}}>200 метров мягко</text.T16>
-            <text.T16 style={{fontStyle: 'italic', marginBottom: 10}}>🌊 "Восстанавливаемся, но не останавливаемся!"</text.T16>
-            
-            <text.T16 style={{marginBottom: 5}}>100 метров упражнения на технику</text.T16>
-            <text.T16 style={{fontStyle: 'italic', marginBottom: 10}}>✨ "Последние метры – на идеальную технику!"</text.T16>
-            
-            <text.T16 style={{marginBottom: 5}}>🎯 Итог: 2300 метров – отлично! 💪🔥</text.T16>
+  const renderLessonItem = (item: any) => {
+    return (
+      <div 
+        key={item.id}
+        style={{
+          padding: 16,
+          borderRadius: 12,
+          backgroundColor: '#fff',
+          marginBottom: 12,
+          boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
+          borderLeft: `4px solid ${item.locked ? theme.colors.secondaryTextColor : theme.colors.mainColor}`,
+        }}
+      >
+        <div style={{...utils.rowCenter(), marginBottom: 10}}>
+          <div style={{
+            width: 24,
+            height: 24,
+            borderRadius: '50%',
+            background: item.locked ? '#eee' : '#e6f2ff',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexShrink: 0,
+            marginRight: 12,
+          }}>
+            {item.locked ? (
+              <span style={{fontSize: 12}}>🔒</span>
+            ) : (
+              <svg.SmallPlaySvg />
+            )}
           </div>
-          
-          <components.Button
-            title='Buy course'
-            onClick={() => {
-              navigate('/checkout', {state: {course}});
-            }}
-          />
+          <text.H5 style={{flex: 1}}>{item.title}</text.H5>
+          <text.T14 style={{color: theme.colors.secondaryTextColor}}>
+            {item.duration}
+          </text.T14>
         </div>
-      );
-    }
-  
-    return null;
-  };
-
-
-//блок оригинала
-  // const renderAboutCourse = (): JSX.Element | null => {
-  //   if (selectedTab.id === 1) {
-  //     return (
-  //       <div
-  //         className='container'
-  //         style={{marginBottom: 20}}
-  //       >
-  //         <text.H5 style={{marginBottom: 10}}>About Course</text.H5>
-  //         <span style={{...utils.rowCenter({gap: 10}), marginBottom: 6}}>
-  //           <svg.UserSvg />
-  //           <text.T16>{course.author}</text.T16>
-  //         </span>
-  //         <span style={{...utils.rowCenter({gap: 10}), marginBottom: 6}}>
-  //           <svg.VideoSvg />
-  //           <text.T16>14 hours on-demand video</text.T16>
-  //         </span>
-  //         <span style={{...utils.rowCenter({gap: 10}), marginBottom: 6}}>
-  //           <svg.DownloadSvg />
-  //           <text.T16>16 downloadable resources</text.T16>
-  //         </span>
-  //         <span style={{...utils.rowCenter({gap: 10}), marginBottom: 10}}>
-  //           <svg.CertificateSvg />
-  //           <text.T16>Certificate of completion</text.T16>
-  //         </span>
-  //         <text.T16 style={{marginBottom: 25}}>
-  //           Welcome to Udemy's first, No Coding Required, VR development course,
-  //           using VRTK 4. Build once and deploy to both Oculus.
-  //         </text.T16>
-  //         <components.Button
-  //           title='Buy course'
-  //           onClick={() => {
-  //             navigate('/checkout', {state: {course}});
-  //           }}
-  //         />
-  //       </div>
-  //     );
-  //   }
-
-  //   return null;
-  // };
-
-
-
-
-
-
-
-
-
-
-
-  const renderLessons = (): JSX.Element | null => {
-    if (selectedTab.id === 2) {
-      return (
-        <div className='container'>
-          <Accordion.Root
-            type='single'
-            collapsible={true}
-          >
-            {lessons?.map((item: any, index) => {
-              const isOpen = openItem === item.id;
-              return (
-                <Accordion.Item
-                  key={item.id}
-                  value={item.id}
-                  onClick={() => setOpenItem(isOpen ? null : item.id)}
-                >
-                  <Accordion.Trigger
-                    className='custom-block'
-                    style={{
-                      width: '100%',
-                      padding: '13px 20px',
-                      cursor: 'pointer',
-                      userSelect: 'none',
-                      borderRadius: 10,
-                      marginBottom: 10,
-                      display: 'flex',
-                      flexDirection: 'row',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                      boxShadow: '0px 4px 10px rgba(37, 73, 150, 0.05)',
-                    }}
-                  >
-                    <text.H5 numberOfLines={1}>{item.title}</text.H5>
-                    <text.T10>
-                      {item.lecture} • {item.duration}
-                    </text.T10>
-                  </Accordion.Trigger>
-                  <Accordion.Content style={{marginBottom: 20, marginTop: 20}}>
-                    {item.content.map((content: any) => {
-                      return (
-                        <div
-                          key={content.id}
-                          style={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            marginBottom: 6,
-                            paddingLeft: 10,
-                            paddingRight: 10,
-                          }}
-                        >
-                          <div style={{...utils.rowCenter()}}>
-                            <svg.SmallPlaySvg />
-                            <text.T14
-                              numberOfLines={1}
-                              style={{marginRight: 'auto', marginLeft: 10}}
-                            >
-                              {content.title}
-                            </text.T14>
-                            <text.T14 numberOfLines={1}>
-                              {content.duration}
-                            </text.T14>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </Accordion.Content>
-                </Accordion.Item>
-              );
-            })}
-          </Accordion.Root>
-          <components.Button
-            title='Buy course'
-            onClick={() => {
-              navigate('/checkout');
-            }}
-            style={{marginBottom: 20, marginTop: 20}}
-          />
-        </div>
-      );
-    }
-
-    return null;
-  };
-
-  const renderReviews = (): JSX.Element | null => {
-    if (selectedTab.id === 4) {
-      return (
-        <div
-          style={{marginBottom: 20}}
-          className='container'
-        >
-          {reviews.map((item, index, array) => {
-            const isLast = index === array.length - 1;
-            return (
-              <items.ReviewItem
-                key={item.id}
-                review={item}
-                isLast={isLast}
-              />
-            );
-          })}
-        </div>
-      );
-    }
-
-    return null;
-  };
-
-  const renderInstructor = (): JSX.Element | null => {
-    if (selectedTab.id === 3) {
-      return (
-        <div>
-          <div
-            className='container'
-            style={{marginBottom: 30}}
-          >
-            <text.H5 style={{marginBottom: 2}}>{course.author}</text.H5>
-            <text.T10 style={{marginBottom: 10}}>{course.position}</text.T10>
-            <div style={{...utils.rowCenter(), marginBottom: 30}}>
-              <img
-                src={course.authorImage}
-                alt='author'
-                style={{borderRadius: 5, width: 91, marginRight: 10}}
-              />
-              <div>
-                <div style={{...utils.rowCenter({gap: 7}), marginBottom: 6}}>
-                  <svg.StarSvg color={theme.colors.mainColor} />
-                  <text.T10 style={{color: theme.colors.bodyTextColor}}>
-                    4.5 Instructor Rating
-                  </text.T10>
-                </div>
-                <div style={{...utils.rowCenter({gap: 7}), marginBottom: 6}}>
-                  <svg.ChatSvg />
-                  <text.T10 style={{color: theme.colors.bodyTextColor}}>
-                    116 Reviews
-                  </text.T10>
-                </div>
-                <div style={{...utils.rowCenter({gap: 7}), marginBottom: 6}}>
-                  <svg.GraduateSvg />
-                  <text.T10 style={{color: theme.colors.bodyTextColor}}>
-                    936 Students
-                  </text.T10>
-                </div>
-                <div style={{...utils.rowCenter({gap: 7}), marginBottom: 6}}>
-                  <svg.BtnPlaySvg />
-                  <text.T10 style={{color: theme.colors.bodyTextColor}}>
-                    12 Courses
-                  </text.T10>
-                </div>
-              </div>
-            </div>
-            <text.H5 style={{marginBottom: 10}}>About teacher</text.H5>
-            <text.T16
-              style={{color: theme.colors.bodyTextColor, marginBottom: 10}}
-            >
-              I started working as a software developer at the age of 23, and
-              never looked back. I explored careers as varied as being a Game
-              Developer, Educator and Drone Pilot, over the last 25 years. None
-              of these provided a continual challenge in the same way the
-              combination of...
-            </text.T16>
-            <svg.ShowMoreSvg />
-          </div>
-          <div style={{marginBottom: 30, width: '100%'}}>
-            <components.BlockHeading
-              title='Courses'
-              containerStyle={{padding: '0 20px', marginBottom: 7}}
-              viewAllOnClick={() => {
-                navigate('/category-list', {state: {title: 'Courses'}});
+        
+        {item.description && (
+          <div style={{
+            marginTop: 8,
+            paddingLeft: 36,
+          }}>
+            <div 
+              style={{
+                padding: 12,
+                borderRadius: 8,
+                backgroundColor: '#f8f9fa',
+                lineHeight: 1.6,
               }}
+              dangerouslySetInnerHTML={{__html: item.description}}
             />
-            <Swiper
-              spaceBetween={16}
-              slidesPerView={'auto'}
-              pagination={{clickable: true}}
-            >
-              {coursesData.map((course: any, index: any, array: any) => {
-                const isLast = index === array.length - 1;
-                return (
-                  <SwiperSlide
-                    key={course.id}
-                    style={{
-                      width: 230,
-                      height: 300,
-                      padding: 10,
-                      cursor: 'pointer',
-                      userSelect: 'none',
-                      backgroundColor: index % 2 === 0 ? '#AEB7F8' : '#FE9BB3',
-                      borderRadius: 10,
-                      display: 'flex',
-                      flexDirection: 'column',
-                      position: 'relative',
-                    }}
-                    onClick={() => {
-                      navigate('/course-details', {state: {course}});
-                    }}
-                  >
-                    <img
-                      src={course.threeDPreview}
-                      alt={course.name}
-                      style={{
-                        width: '88%',
-                        margin: '0 auto',
-                        marginTop: 10,
-                        marginBottom: 'auto',
-                      }}
-                    />
-                    <elements.CourseName
-                      course={course}
-                      numberOfLines={2}
-                      style={{color: theme.colors.white, marginBottom: 16}}
-                    />
-                    <div style={{...utils.rowCenterSpcBtw()}}>
-                      <div style={{...utils.rowCenter()}}>
-                        <svg.ClockSvg color='#D7D9FE' />
-                        <text.T14
-                          style={{
-                            marginLeft: 6,
-                            marginRight: 'auto',
-                            color: '#D7D9FE',
-                          }}
-                        >
-                          {course.duration}
-                        </text.T14>
-                      </div>
-                      <text.T16
-                        style={{
-                          color: theme.colors.white,
-                          ...theme.fonts.Lato_700Bold,
-                        }}
-                      >
-                        ${course.price.toFixed(2)}
-                      </text.T16>
-                    </div>
-                    <elements.CourseRating
-                      course={course}
-                      containerStyle={{
-                        position: 'absolute',
-                        top: 2,
-                        left: 2,
-                        borderBottomRightRadius: 10,
-                        borderTopLeftRadius: 10,
-                        borderTopRightRadius: 0,
-                        borderBottomLeftRadius: 0,
-                      }}
-                    />
-                    <elements.CourseInWishlist
-                      course={course}
-                      size={20}
-                      customFillColor={theme.colors.white}
-                      customStrokeColor={theme.colors.white}
-                      style={{position: 'absolute', right: 10, top: 10}}
-                    />
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
           </div>
-        </div>
-      );
-    }
+        )}
 
-    return null;
+        {item.locked && (
+          <div style={{
+            ...utils.rowCenter(), 
+            justifyContent: 'flex-end',
+            marginTop: 8,
+            paddingLeft: 36,
+          }}>
+            <text.T12 style={{
+              color: theme.colors.secondaryTextColor,
+              background: 'rgba(0,0,0,0.03)',
+              padding: '4px 8px',
+              borderRadius: 4,
+            }}>
+              🔒 Доступно после покупки
+            </text.T12>
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  const renderLessons = (): JSX.Element => {
+    return (
+      <div className="container">
+        <Accordion.Root type="single" collapsible>
+          {lessons.map((lesson) => (
+            <Accordion.Item key={lesson.id} value={lesson.id}>
+              <Accordion.Trigger
+                className="custom-block"
+                style={{
+                  width: '100%',
+                  padding: '16px 20px',
+                  cursor: 'pointer',
+                  userSelect: 'none',
+                  borderRadius: 12,
+                  marginBottom: 12,
+                  display: 'flex',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  background: '#fff',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
+                  border: `1px solid ${openItem === lesson.id ? '#e6f2ff' : '#e0e0e0'}`,
+                }}
+                onClick={() => setOpenItem(openItem === lesson.id ? null : lesson.id)}
+              >
+                <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
+                  <div style={{
+                    width: 24,
+                    height: 24,
+                    borderRadius: '50%',
+                    background: '#e6f2ff',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}>
+                    <text.T14 style={{...theme.fonts.Lato_700Bold, color: theme.colors.mainColor}}>
+                      {lesson.id}
+                    </text.T14>
+                  </div>
+                  <text.H5>{lesson.title}</text.H5>
+                </div>
+                <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
+                  <text.T14 style={{color: theme.colors.secondaryTextColor}}>
+                    {lesson.lecture} • {lesson.duration}
+                  </text.T14>
+                  <span style={{
+                    display: 'inline-block',
+                    transform: openItem === lesson.id ? 'rotate(180deg)' : 'rotate(0deg)',
+                    transition: 'transform 0.2s ease',
+                  }}>
+                    ▼
+                  </span>
+                </div>
+              </Accordion.Trigger>
+              <Accordion.Content style={{
+                overflow: 'hidden',
+                padding: openItem === lesson.id ? '0 16px 16px' : 0,
+                maxHeight: openItem === lesson.id ? '1000px' : 0,
+                transition: 'max-height 0.2s ease, padding 0.2s ease',
+              }}>
+                {openItem === lesson.id && lesson.content.map(renderLessonItem)}
+              </Accordion.Content>
+            </Accordion.Item>
+          ))}
+        </Accordion.Root>
+        
+        <div style={{margin: '24px 0'}}>
+          <components.Button
+            title='Начать курс'
+            onClick={() => navigate('/checkout')}
+            style={{width: '100%'}}
+          />
+        </div>
+      </div>
+    );
   };
 
   const renderContent = (): JSX.Element => {
@@ -745,17 +504,13 @@ export const CourseDetails: React.FC = () => {
         {renderTitle()}
         {renderRating()}
         {renderTabs()}
-        {renderAboutCourse()}
         {renderLessons()}
-        {renderReviews()}
-        {renderInstructor()}
       </main>
     );
   };
 
   return (
     <>
-      {renderImageBackground()}
       {renderHeader()}
       {renderContent()}
     </>

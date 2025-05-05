@@ -134,7 +134,7 @@ export const Home: React.FC = () => {
           >
             Здесь ты найдешь все для себя
           </text.T14>
-          <div
+          {/* <div
             style={{
               background:
                 'linear-gradient(90deg, rgba(155, 245, 255, 0.5) 0%, rgba(186, 238, 255, 0.5) 100%)',
@@ -159,7 +159,7 @@ export const Home: React.FC = () => {
                 color: theme.colors.secondaryTextColor,
               }}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     );
