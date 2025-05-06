@@ -2,7 +2,6 @@ export type CourseType = {
   id: number;
   name: string;
   price: number;
-
   rating: number;
   image: string;
   images: string[];
@@ -30,4 +29,24 @@ export type CourseType = {
   oldPrices: number;
   categoryId: number;
   preview_90x90: string;
+  // Добавляем новые поля
+  innerPreview?: string;
+  instructor?: {
+    name: string;
+    avatar: string;
+    bio?: string;
+  };
+  // Другие поля из вашего JSON
+  position?: string;
+  author?: string;
+  authorImage?: string;
+  bigPreview?: string;
+  threeDPreview?: string;
+  video?: string;
+  aboutTeacher?: string;
+  isTopRated?: boolean;
+  popular?: boolean;
+  isSpecial?: boolean;
+  status?: boolean;
+  studentsCount?: number; 
 };

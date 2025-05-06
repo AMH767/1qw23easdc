@@ -1,13 +1,12 @@
-import React, {useState, useEffect} from 'react';
-import {useLocation} from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import {text} from '../text';
-import {utils} from '../utils';
-import {hooks} from '../hooks';
-import {svg} from '../assets/svg';
-import {theme} from '../constants';
-import {CourseType} from '../types';
-import {course as elements} from '../course';
+import { text } from '../text';
+import { utils } from '../utils';
+import { svg } from '../assets/svg';
+import { theme } from '../constants';
+import { CourseType } from '../types';
+import { course as elements } from '../course';
 
 type Props = {
   isLast?: boolean;
@@ -22,7 +21,21 @@ export const CourseCard: React.FC<Props> = ({
   isLast,
   status,
 }) => {
-  const navigate = hooks.useNavigate();
+  const navigate = useNavigate();
+
+  // Функция для определения пути перехода на основе названия курса
+  const getCoursePath = (courseName: string) => {
+    if (courseName.includes('Баттерфляй')) return '/butterfly-course';
+    if (courseName.includes('Кроль на Спине')) return '/course-details';
+    if (courseName.includes('Кроль')) return '/krol';
+    if (courseName.includes('Брасс')) return '/breaststroke-course';
+    return '/course-details'; // путь по умолчанию
+  };
+
+  const handleCourseClick = () => {
+    const path = getCoursePath(course.name);
+    navigate(path, { state: { course } });
+  };
 
   if (section === 'top rated') {
     return (
@@ -39,8 +52,9 @@ export const CourseCard: React.FC<Props> = ({
           borderBottomStyle: isLast ? 'none' : 'solid',
           borderBottomColor: `rgba(59, 89, 153, 0.1)`,
         }}
-        onClick={() => navigate('/course-details', {state: {course}})}
+        onClick={handleCourseClick}
       >
+        {/* Остальное содержимое без изменений */}
         <div
           style={{
             minWidth: 130,
@@ -116,8 +130,9 @@ export const CourseCard: React.FC<Props> = ({
           borderBottomStyle: isLast ? 'none' : 'solid',
           borderBottomColor: `rgba(59, 89, 153, 0.1)`,
         }}
-        onClick={() => navigate('/course-details', {state: {course}})}
+        onClick={handleCourseClick}
       >
+        {/* Остальное содержимое без изменений */}
         <div
           style={{
             minWidth: 130,
@@ -184,7 +199,7 @@ export const CourseCard: React.FC<Props> = ({
       >
         <div
           style={{height: 96, position: 'relative'}}
-          onClick={() => navigate('/course-details', {state: {course}})}
+          onClick={handleCourseClick}
         >
           <img
             src={course.preview_90x90}
@@ -284,7 +299,6 @@ export const CourseCard: React.FC<Props> = ({
                 ...utils.flexCenter(),
               }}
               onClick={() => navigate('/course-completed')}
-              // onClick={() => navigate('/course-completed-certificate')}
             >
               <text.T10 style={{color: theme.colors.mainColor}}>
                 View certificate

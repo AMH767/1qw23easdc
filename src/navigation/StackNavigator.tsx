@@ -5,6 +5,7 @@ import {RouterProvider, createBrowserRouter} from 'react-router-dom';
 import {screens} from '../screens';
 import {components} from '../components';
 import {TabNavigator} from './TabNavigator';
+import { KrolCourse } from '../screens/KrolCourse';
 
 const stack = createBrowserRouter([
   {
@@ -33,6 +34,11 @@ const stack = createBrowserRouter([
   {
     path: '/PrivacyMusic',
     element: <screens.MusicPlayer />,
+  },
+
+  {
+    path: '/krol',
+    element: <KrolCourse />
   },
 
   {

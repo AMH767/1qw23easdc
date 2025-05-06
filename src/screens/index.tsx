@@ -21,6 +21,8 @@ import {PaymentFailed} from './PaymentFailed';
 import {PrivacyPolicy} from './PrivacyPolicy';
 import {PrivacyRaspis} from './PrivacyRaspis';
 import {MusicPlayer} from './PrivacyMusic';
+import {KrolCourse} from './KrolCourse';
+
 import PrivacyPlanner from './PrivacyPlanner';
 
 import PrivacyVideo from './PrivacyVideo';
@@ -73,6 +75,7 @@ export const screens = {
   PrivacyVideo,
   PrivacyAichat,
   PrivacyPlanner,
+  KrolCourse,
 
 
 
